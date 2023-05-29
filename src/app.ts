@@ -6,7 +6,7 @@ app.use(cors())
 
 //parser
 app.use(express.json())
-      app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }))
 
 //testing
 app.get('/', (req: Request, res: Response) => {
