@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
+import userRouter from './app/modules/users/UserRouter'
 const app: Application = express()
 //cors
 app.use(cors())
@@ -12,5 +13,6 @@ app.use(express.urlencoded({ extended: true }))
 app.get('/', (req: Request, res: Response) => {
   res.send('Hi Server!')
 })
+app.use('/api/users', userRouter)
 
 export default app
